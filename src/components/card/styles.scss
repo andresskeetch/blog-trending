@@ -1,0 +1,11 @@
+.card {
+  position: relative;
+  width: 21.75rem;
+  height: 21.75rem;
+
+  &__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}

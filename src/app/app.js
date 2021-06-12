@@ -1,4 +1,4 @@
-import { Nav } from "components";
+import { Nav, Footer } from "components";
 import { Home } from "domains/home";
 import "./styles.scss";
 
@@ -7,6 +7,9 @@ const App = () => {
     <>
       <Nav />
       <Home />
+      <div class="max-centered">
+        <Footer />
+      </div>
     </>
   );
 };
