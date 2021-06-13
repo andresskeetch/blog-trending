@@ -14,6 +14,36 @@
 
     & > .select {
       width: 10rem;
+      display: none;
+    }
+  }
+
+  &__content {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 1rem;
+    flex-wrap: nowrap;
+    & > div {
+      flex: 0 0 auto;
+    }
+
+    &::-webkit-scrollbar {
+      width: 10px;
+      margin-right: 5px;
+    }
+
+    &::-webkit-scrollbar-track {
+      border-radius: 16px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: #f8f8f8;
+      border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+      background: #f8f8f8;
     }
   }
 }
@@ -21,11 +51,37 @@
 @media all and (min-width: 768px) {
   .list {
     padding: 1rem;
+
+    & .select {
+      display: block;
+    }
+    &__content {
+      display: grid;
+      column-gap: 21px;
+      grid-template-columns: 1fr 1fr;
+      overflow: hidden;
+    }
   }
 }
 
 @media all and (min-width: 1100px) {
   .list {
     padding: 0rem;
+
+    & .select {
+      display: block;
+    }
+
+    &__content {
+      display: grid;
+      column-gap: 27px;
+      grid-template-columns: 1fr 1fr 1fr;
+      overflow: hidden;
+
+      &--list {
+        display: flex;
+        flex-direction: column;
+      }
+    }
   }
 }

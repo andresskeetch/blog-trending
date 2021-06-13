@@ -1,40 +1,24 @@
 import React from "react";
 import { Dropdown, Card } from "components";
+import useGetList from "domains/home/core/hooks/useTypeView";
 import "./styles.scss";
 
-const options = [
-  {
-    value: "grid",
-    label: "Grid",
-  },
-  {
-    value: "list",
-    label: "List",
-  },
-];
-
-const List = () => {
+const List = ({ data, onVote }) => {
+  const { options, selected, setSelected } = useGetList();
   return (
     <div className="list">
       <div className="list__header">
         <h1>Previus Rulings</h1>
-        <Dropdown options={options} />
+        <Dropdown options={options} onChange={setSelected} value={selected} />
       </div>
-      <div>
-        <Card
-          data={{
-            name: "Kanye West",
-            description:
-              "Born in Atlanta and raised in Chicago, West was first known as a producer for Roc-A-Fella Records in the early 2000s, producing singles for several mainstream artists.",
-            category: "entertainment",
-            picture: "kanye.png",
-            lastUpdated: "2020-03-10T23:08:57.892Z",
-            votes: {
-              positive: 23,
-              negative: 36,
-            },
-          }}
-        />
+      <div
+        className={`list__content ${
+          selected.value === "list" ? "list__content--list" : ""
+        }`}
+      >
+        {data.map((item) => (
+          <Card type={selected.value} data={item} onVote={onVote} />
+        ))}
       </div>
     </div>
   );

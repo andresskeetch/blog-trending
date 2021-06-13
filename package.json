@@ -10,8 +10,13 @@
     "prop-types": "^15.7.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-redux": "^7.2.4",
     "react-scripts": "4.0.3",
-    "react-select": "^4.3.1"
+    "react-select": "^4.3.1",
+    "react-time-ago": "^6.2.2",
+    "redux-logger": "^3.0.6",
+    "redux-saga": "^1.1.3",
+    "reduxsauce": "^1.2.0"
   },
   "scripts": {
     "start": "react-scripts start",

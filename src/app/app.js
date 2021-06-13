@@ -1,16 +1,13 @@
-import { Nav, Footer } from "components";
+import { store } from "libs/store/store";
+import { Provider } from "react-redux";
 import { Home } from "domains/home";
 import "./styles.scss";
 
 const App = () => {
   return (
-    <>
-      <Nav />
+    <Provider store={store}>
       <Home />
-      <div class="max-centered">
-        <Footer />
-      </div>
-    </>
+    </Provider>
   );
 };
 
