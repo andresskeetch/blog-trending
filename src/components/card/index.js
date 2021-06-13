@@ -1,16 +1,14 @@
 import React from "react";
-import "./styles.scss";
+import PropTypes from "prop-types";
+import Card from "./card";
+import List from "./list";
 
-const Card = ({ type, data }) => {
-  return (
-    <div className="card">
-      <img
-        className="card__background"
-        src={`/images/${data.picture}`}
-        alt={data.name}
-      />
-    </div>
-  );
+const CardCustom = ({ type, data }) => {
+  return type === "card" ? <Card data={data} /> : <List data={data} />;
 };
 
-export default Card;
+Card.propTypes = {
+  type: PropTypes.oneOf(["card", "list"]).isRequired,
+};
+
+export default CardCustom;

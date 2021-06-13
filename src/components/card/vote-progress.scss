@@ -1,0 +1,37 @@
+.vote-progress {
+  width: 100%;
+  font-size: 18px;
+  height: 2em;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    height: 2em;
+    align-items: center;
+    padding: 0 0.75rem;
+    color: var(--color-white);
+    position: relative;
+
+    & > div {
+      z-index: 2;
+    }
+
+    & > span {
+      position: absolute;
+      height: 2em;
+    }
+
+    & > .progress-up {
+      left: 0;
+      top: 0;
+      width: 50%;
+      background-color: rgba(var(--color-green-positive), 0.6);
+    }
+    & > .progress-down {
+      right: 0;
+      top: 0;
+      background-color: rgba(var(--color-yellow-negative), 0.6);
+      width: 50%;
+    }
+  }
+}

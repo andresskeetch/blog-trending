@@ -1,7 +1,6 @@
 import React from "react";
 import "./card.scss";
-import thumpUp from "assets/img/thumbs-up.svg";
-import thumpDown from "assets/img/thumbs-down.svg";
+import { Thumb } from "components";
 
 const Card = () => {
   return (
@@ -34,12 +33,8 @@ const Card = () => {
         </p>
         <p class="featured-card__cta">What’s Your Veredict?</p>
         <div class="featured-card__buttons">
-          <button class="icon-button" aria-label="thumbs up">
-            <img src={thumpUp} alt="thumbs up" />
-          </button>
-          <button class="icon-button" aria-label="thumbs down">
-            <img src={thumpDown} alt="thumbs down" />
-          </button>
+          <Thumb type="up" />
+          <Thumb type="down" />
         </div>
       </div>
     </>
