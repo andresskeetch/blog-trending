@@ -2,6 +2,14 @@
 
 App to vote for What's your opinion for?
 
+### Tools
+
+- `Helmet` for SEO
+- `Storybook` Documentation
+- `Jest / React Testing library` for test
+- `SASS` for styles
+- `Redux` and `Redux-persist` for storage
+
 ### Install Proyect
 
 To run this project you must have `node > 10.*`
@@ -24,5 +32,8 @@ You will also see any lint errors in the console.
 
 ### `yarn test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Runs ourt test to verify how its works
+
+### `yarn storybook`
+
+Documentation available for our components, flow and props what its need
