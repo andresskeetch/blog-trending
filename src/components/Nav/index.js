@@ -2,6 +2,7 @@ import React from "react";
 import "./styles.scss";
 import searchImagen from "assets/img/search.svg";
 
+
 export const Nav = () => {
   return (
     <nav class="nav" role="navigation">

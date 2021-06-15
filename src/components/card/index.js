@@ -39,6 +39,8 @@ const CardCustom = ({ type, data, onVote }) => {
 
 Card.propTypes = {
   type: PropTypes.oneOf(["grid", "list"]).isRequired,
+  data: PropTypes.objectOf({}),
+  onVote: PropTypes.func
 };
 
 export default CardCustom;

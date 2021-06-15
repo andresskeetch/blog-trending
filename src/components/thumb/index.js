@@ -14,6 +14,7 @@ const Thumb = ({ type, onClick, isSelected }) => {
       class={`thumb-button icon-button ${
         isSelected ? "thumb-button--selected" : ""
       }`}
+      data-testid={data.label}
       aria-label={data.label}
       onClick={onClick}
     >
@@ -24,10 +25,13 @@ const Thumb = ({ type, onClick, isSelected }) => {
 
 Thumb.propTypes = {
   type: PropTypes.oneOf(["up", "down"]),
+  onClick: PropTypes.func,
+  isSelected: PropTypes.bool
 };
 
 Thumb.defaultProps = {
   type: "up",
+  isSelected: false
 };
 
 export default Thumb;

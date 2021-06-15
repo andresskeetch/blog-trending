@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet"
 import { Hero, Banner, List } from "./components";
 import { Nav, Footer } from "components";
 import useGetList from "domains/home/core/hooks/useGetList";
@@ -10,6 +11,11 @@ export const Home = () => {
   const { addVote } = useAddVote();
   return (
     <>
+      <Helmet>
+        <title>Home - Vote </title>
+        <meta name="description" content="Vote for What's your opinion for?" />
+        <meta name="keywords" content="vote, opinion" />
+      </Helmet>
       <Nav />
       <div className="home">
         <Hero />

@@ -60,6 +60,11 @@
       column-gap: 21px;
       grid-template-columns: 1fr 1fr;
       overflow: hidden;
+
+      &--list {
+        display: flex;
+        flex-direction: column;
+      }
     }
   }
 }
