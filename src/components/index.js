@@ -1,4 +1,4 @@
-export * from "./nav";
+export * from "./nav-header";
 export * from "./footer";
 export { default as Dropdown } from "./dropdown";
 export { default as Card } from "./card";
